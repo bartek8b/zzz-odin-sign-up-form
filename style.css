@@ -71,14 +71,15 @@ body {
 }
 
 div.content-item > p {
-  width: clamp(50ch, 50%, 72ch);
+  width: min(100%, 72ch);
+  white-space: wrap;
 }
 button {
   background: var(--orange);
   color: inherit;
   padding-inline: 16px;
   padding-block: 12px;
-  width: 200px;
+  width: min(200px, 50%);
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -112,6 +113,10 @@ form {
     }
     .logo-container {
         flex-direction: column-reverse;
+        width: 100vw;
+    }
+    .content-container{
+        width: 100vw;
     }
     .logo-background{
         position: static;
