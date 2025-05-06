@@ -1,108 +1,124 @@
-body{
-    display: flex;
-    min-height: 100dvh;
-    min-width: 100dvw;
+body {
+  display: flex;
+  min-height: 100dvh;
+  min-width: 100dvw;
 }
 
-:root{
-    --light: hsl(0, 0%, 90%);
-    --middle: hsl(0, 0%, 80%);
-    --dark: hsl(213, 41%, 21%);
-    --orange: hsl(30, 100%, 54%);
-    --red: hsl(0, 76%, 59%);
+:root {
+  --light: hsl(0, 0%, 90%);
+  --middle: hsl(0, 0%, 80%);
+  --dark: hsl(213, 41%, 21%);
+  --orange: hsl(30, 100%, 54%);
+  --red: hsl(0, 76%, 59%);
 }
 
 /* body container */
-.logo-container{
-    flex: 1;
-    background: url(background.jpg) no-repeat center;
-    background-size: cover;
-    background-color: var(--dark);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.logo-container {
+  flex: 1;
+  background: url(background.jpg) no-repeat center;
+  background-size: cover;
+  background-color: var(--dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.content-container{
-    flex: 2;
-    color: var(--dark);
-    display: flex;
-    flex-direction: column;
-    background-color: var(--middle);       
-    align-items: flex-start;
+.content-container {
+  flex: 2;
+  color: var(--dark);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--middle);
+  align-items: flex-start;
 }
 
 /* logo container */
-.logo-background{
-    position: relative;
-    top: calc(100vh * (2/7));
-    display: flex;
-    justify-content: center;
-    background-color: hsl(0, 0%, 90%, 0.1);
-    backdrop-filter: blur(20px);
+.logo-background {
+  position: relative;
+  top: calc(100vh * (2 / 7));
+  display: flex;
+  justify-content: center;
+  backdrop-filter: blur(20px);
 }
-.logo-background > img{
-    padding: calc((0.2 * 100dvh) / 7);
-    height: calc(0.2 * 100dvh);    
+.logo-background > img {
+  padding: calc((0.2 * 100dvh) / 7);
+  height: calc(0.2 * 100dvh);
 }
-.logo-container > p{
-    color: var(--light);
-    text-align: center;
-    margin-top: auto;
-    font-size: .8rem;
+.logo-container > p {
+  color: var(--light);
+  text-align: center;
+  margin-top: auto;
+  font-size: 0.8rem;
 }
-.logo-container > p > a{
-    color: inherit;
+.logo-container > p > a {
+  color: inherit;
 }
 
 /* content container */
-.content-item{
-    height: calc(100vh / 3);
-    padding-inline: min(5%, 64px);
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: calc(1rem + 0.1vw);
+.content-item {
+  height: calc(100vh / 3);
+  padding-inline: min(5%, 64px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: calc(1rem + 0.1vw);
 }
-.content-container div:nth-child(odd){
-    height: calc(100vh * (2/7));
+.content-container div:nth-child(odd) {
+  height: calc(100vh * (2 / 7));
 }
-.content-container form:nth-child(even){
-    height: calc(100vh * (3/7));
+.content-container form:nth-child(even) {
+  height: calc(100vh * (3 / 7));
 }
 
 div.content-item > p {
-    width: clamp(50ch, 50%, 72ch);
+  width: clamp(50ch, 50%, 72ch);
 }
 button {
-   background: var(--orange);
-   color: inherit;
-   padding-inline: 16px;
-   padding-block: 12px;
-   width: 200px;
-   border: none;
-   border-radius: 8px;
-   cursor: pointer;
-   margin-bottom: auto;
-   margin-top: 16px;
-   transform: scale(100%);
-   transition: .3s linear;
+  background: var(--orange);
+  color: inherit;
+  padding-inline: 16px;
+  padding-block: 12px;
+  width: 200px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: auto;
+  margin-top: 32px;
+  transform: scale(100%);
+  transition: 0.3s linear;
 }
-button:hover{
-    transform: scale(105%);
+button:hover {
+  transform: scale(105%);
 }
-.button-container{
-    display: block;
+.button-container {
+  display: block;
 }
 .button-container > p {
-    font-size: .9rem;    
-    a{
-        color: var(--orange);
-        text-decoration: none;
-        font-weight: bold;
-    }
+  font-size: 0.9rem;
+  a {
+    color: var(--orange);
+    text-decoration: none;
+    font-weight: bold;
+  }
 }
-form{
-    background-color: var(--light);
-    box-shadow: 1px 1px 3px var(--dark);
+form {
+  background-color: var(--light);
+  box-shadow: 1px 1px 3px var(--dark);
+}
+
+@media only screen and (max-width: 767px) {
+    body{
+        flex-direction: column;
+    }
+    .logo-container {
+        flex-direction: column-reverse;
+    }
+    .logo-background{
+        position: static;
+        backdrop-filter: none;
+        background-color: transparent;
+    }
+    .logo-background > img {
+        backdrop-filter: blur(20px);
+    }
 }
