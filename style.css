@@ -37,7 +37,7 @@ body {
   top: calc(100vh * (2 / 7));
   display: flex;
   justify-content: center;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(10px);
 }
 .logo-background > img {
   padding: calc((0.2 * 100dvh) / 7);
@@ -55,7 +55,6 @@ body {
 
 /* content container */
 .content-item {
-  height: calc(100vh / 3);
   padding-inline: min(5%, 64px);
   width: 100%;
   display: flex;
@@ -63,11 +62,11 @@ body {
   justify-content: center;
   font-size: calc(1rem + 0.1vw);
 }
-.content-container div:nth-child(odd) {
-  height: calc(100vh * (2 / 7));
+.content-container > div {
+  min-height: calc(100vh * (2 / 7));
 }
-.content-container form:nth-child(even) {
-  height: calc(100vh * (3 / 7));
+.content-container > form {
+  min-height: calc(100vh * (3 / 7));
 }
 
 div.content-item > p {
@@ -102,10 +101,34 @@ button:hover {
     font-weight: bold;
   }
 }
-form {
+
+
+/* form */
+#form {
   background-color: var(--light);
   box-shadow: 1px 1px 3px var(--dark);
+  padding: 32px;
+  display: block;
 }
+.form-row{
+  display: flex;
+  flex-direction: column;
+  width: 34%;
+  padding: 16px 16px 16px 0px;
+  float: left;
+}
+#form > legend{
+  margin-bottom: 32px;
+}
+.form-row > label{
+  font-size: calc(.8rem + 0.1vw);
+  padding-bottom: 4px;
+}
+.form-row > input{
+  
+}
+
+
 
 @media only screen and (max-width: 767px) {
     body{
@@ -124,6 +147,11 @@ form {
         background-color: transparent;
     }
     .logo-background > img {
-        backdrop-filter: blur(20px);
+        backdrop-filter: blur(10px);
+        margin-bottom: 16px;
+        border-radius: 32px;
+    }
+    .form-row{
+      width: 70%;
     }
 }
