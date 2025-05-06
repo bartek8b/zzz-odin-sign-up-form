@@ -148,9 +148,8 @@ button:hover {
         background-color: transparent;
     }
     .logo-background > img {
-        backdrop-filter: blur(10px);
+        backdrop-filter: none;
         margin-bottom: 16px;
-        border-radius: 32px;
     }
     .form-row{
       width: 70%;
