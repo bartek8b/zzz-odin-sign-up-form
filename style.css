@@ -7,7 +7,7 @@ body {
 :root {
   --light: hsl(0, 0%, 90%);
   --middle: hsl(0, 0%, 80%);
-  --dark: hsl(213, 41%, 21%);
+  --dark: hsl(210, 79%, 24%);
   --orange: hsl(30, 100%, 54%);
   --red: hsl(0, 76%, 59%);
 }
@@ -113,7 +113,7 @@ button:hover {
 .form-row{
   display: flex;
   flex-direction: column;
-  width: 34%;
+  width: max(34%, 230px);
   padding: 16px 16px 16px 0px;
   float: left;
 }
@@ -123,6 +123,7 @@ button:hover {
 .form-row > label{
   font-size: calc(.8rem + 0.1vw);
   padding-bottom: 4px;
+  cursor: pointer;
 }
 .form-row > input{
   
