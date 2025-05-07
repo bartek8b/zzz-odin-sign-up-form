@@ -36,15 +36,14 @@
       <div class="content-item">
         <p>
           <strong>Effort Academy - The Forge of Vitality</strong> <br /><br />
-          We forge strength through guided effort, offering no shortcuts, only
-          growth. Learn with curiosity, thrive with vitality, and join us to
-          shape a brighter future.
+          We forge strength through guided effort, offering no shortcuts, only growth. Learn with curiosity, thrive with vitality, and join us to shape a brighter future.
         </p>
       </div>
 
-      <form action="" method="POST" id="form" class="content-item">
+      <form action="#" method="POST" id="form" class="content-item">
 
         <legend>Let's do this!</legend>
+        <p aria-hidden="true">Fields marked with * are required</p>
 
         <div class="form-row">
           <label for="first-name">FIRST NAME</label>
@@ -57,8 +56,8 @@
         </div>
 
         <div class="form-row">
-          <label for="email">EMAIL</label>
-          <input type="email" id="email" name="email">
+          <label for="email">EMAIL <span aria-label="required">*</span></label>
+          <input type="email" id="email" name="email" required>
         </div>
 
         <div class="form-row">
@@ -67,21 +66,23 @@
         </div>
 
         <div class="form-row">
-          <label for="password">PASSWORD</label>
-          <input type="password" id="password" name="password">
+          <label for="password">PASSWORD <span aria-label="required">*</span></label>
+          <input type="password" id="password" name="password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$" 
+          title="The password must contain at least 8 characters, including a lowercase letter, an uppercase letter, a number and a special character.">
         </div>
 
         <div class="form-row">
-          <label for="password-check">REPEAT PASSWORD</label>
-          <input type="password" id="fpassword-check" name="password-check">
-        </div>
+          <label for="password-check">REPEAT PASSWORD <span aria-label="required">*</span></label>
+          <input type="password" id="password-check" name="password-check" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$" 
+          title="The password must contain at least 8 characters, including a lowercase letter, an uppercase letter, a number and a special character.">
+        </div>       
 
       </form>
 
       <div class="content-item button-container">
         <button type="submit" form="form">Sign in</button>
-        <p>Already have an account? <a href="">Log in</a></p>
-      </div>
+        <p>Already have an account? <a href="#">Log in</a></p>
+      </div>      
     </div>
   </body>
 </html>
