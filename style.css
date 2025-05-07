@@ -107,7 +107,7 @@ button:active {
 #form {
   background-color: var(--light);
   box-shadow: 1px 1px 3px var(--dark);
-  padding-top: 32px;
+  padding-block: 32px;
   display: block;
 }
 .form-row{
@@ -147,7 +147,6 @@ button:active {
 .form-row:has(input:focus) label {
   top: -4px;
 }
-
 #form > p {
   font-size: calc(.8rem + 0.1vw);
 }
