@@ -2,6 +2,7 @@ body {
   display: flex;
   min-height: 100dvh;
   min-width: 100dvw;
+  -webkit-tap-highlight-color: transparent;
 }
 
 :root {
