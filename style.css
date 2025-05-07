@@ -63,10 +63,10 @@ body {
   font-size: calc(1rem + 0.1vw);
 }
 .content-container > div {
-  min-height: calc(100vh * (2 / 7));
+  min-height: calc(100vh * (1 / 5));
 }
 .content-container > form {
-  min-height: calc(100vh * (3 / 7));
+  min-height: calc(100vh * (3 / 5));
 }
 
 div.content-item > p {
@@ -107,7 +107,7 @@ button:active {
 #form {
   background-color: var(--light);
   box-shadow: 1px 1px 3px var(--dark);
-  padding: 32px;
+  padding-top: 32px;
   display: block;
 }
 .form-row{
@@ -156,6 +156,7 @@ button:active {
 @media only screen and (max-width: 767px) {
     body{
         flex-direction: column;
+        overflow-x: hidden;
     }
     .logo-container {
         flex-direction: column-reverse;
