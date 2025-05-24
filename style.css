@@ -1,7 +1,7 @@
 body {
   display: flex;
   min-height: 100dvh;
-  min-width: 100dvw;
+  min-width: 100%;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -155,7 +155,6 @@ button:active {
 @media only screen and (max-width: 767px) {
     body{
         flex-direction: column;
-        overflow-x: hidden;
     }
     .logo-container {
         flex-direction: column-reverse;
